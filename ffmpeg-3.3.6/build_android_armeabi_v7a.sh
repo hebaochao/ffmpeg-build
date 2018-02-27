@@ -15,7 +15,37 @@ GENERAL="\
 
 
 MODULES="\
---enable-gpl"
+--disable-debug \
+--disable-encoders \
+--disable-decoders \
+--enable-decoder=hevc \
+--enable-hwaccels \
+--disable-muxers \
+--disable-demuxers \
+--enable-muxer=hevc \
+--enable-demuxer=hevc \
+--disable-parsers \
+--enable-parser=hevc \
+--disable-network \
+--disable-protocols \
+--disable-devices \
+--disable-indevs \
+--disable-outdevs \
+--disable-yasm \
+--enable-asm \
+--enable-neon \
+--disable-programs \
+--disable-ffmpeg \
+--disable-ffplay \
+--disable-ffprobe \
+--disable-ffserver \
+--disable-doc \
+--disable-htmlpages \
+--disable-manpages \
+--disable-podpages \
+--disable-txtpages \
+--enable-cross-compile"
+
 
 function build_ARMv7
 {
@@ -30,7 +60,8 @@ function build_ARMv7
 --extra-cflags="-DANDROID -fPIC -ffunction-sections -funwind-tables -fstack-protector -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fomit-frame-pointer -fstrict-aliasing -funswitch-loops -finline-limit=300" \
 --extra-ldflags="-Wl,-rpath-link=$PLATFORM/usr/lib -L$PLATFORM/usr/lib -nostdlib -lc -lm -ldl -llog" \
 
-  --enable-zlib \
+#--enable-zlib \
+
   ${MODULES} \
   --disable-doc \
   --enable-neon

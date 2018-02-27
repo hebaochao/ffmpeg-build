@@ -13,7 +13,36 @@ GENERAL="\
 --nm=$PREBUILT/bin/i686-linux-android-nm "
 
 MODULES="\
---enable-gpl"
+--disable-debug \
+--disable-encoders \
+--disable-decoders \
+--enable-decoder=hevc \
+--enable-hwaccels \
+--disable-muxers \
+--disable-demuxers \
+--enable-muxer=hevc \
+--enable-demuxer=hevc \
+--disable-parsers \
+--enable-parser=hevc \
+--disable-network \
+--disable-protocols \
+--disable-devices \
+--disable-indevs \
+--disable-outdevs \
+--disable-yasm \
+--enable-asm \
+--enable-neon \
+--disable-programs \
+--disable-ffmpeg \
+--disable-ffplay \
+--disable-ffprobe \
+--disable-ffserver \
+--disable-doc \
+--disable-htmlpages \
+--disable-manpages \
+--disable-podpages \
+--disable-txtpages \
+--enable-cross-compile"
 
 
 function build_x86
@@ -30,7 +59,9 @@ function build_x86
  --disable-static \
  --extra-cflags="-march=i686 -mtune=intel -mssse3 -mfpmath=sse -m32" \
  --extra-ldflags="-Wl,-rpath-link=$PLATFORM/usr/lib -L$PLATFORM/usr/lib -nostdlib -lc -lm -ldl -llog" \
-  --enable-zlib \
+
+#  --enable-zlib \
+
   --disable-doc \
   ${MODULES}
 

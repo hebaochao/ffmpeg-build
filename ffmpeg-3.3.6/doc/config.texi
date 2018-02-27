@@ -21,8 +21,8 @@
 @c @set arch-tilepro no
 @c @set arch-tomi no
 @set arch-x86 yes
-@set arch-x86-32 yes
-@c @set arch-x86-64 no
+@c @set arch-x86-32 no
+@set arch-x86-64 yes
 @c @set have-armv5te no
 @c @set have-armv6 no
 @c @set have-armv6t2 no
@@ -156,9 +156,9 @@
 @c @set have-loongson3-inline no
 @c @set have-mmi-inline no
 @set have-aligned-stack yes
-@c @set have-fast-64bit no
+@set have-fast-64bit yes
 @set have-fast-clz yes
-@c @set have-fast-cmov no
+@set have-fast-cmov yes
 @set have-local-aligned-8 yes
 @set have-local-aligned-16 yes
 @set have-local-aligned-32 yes
@@ -248,8 +248,8 @@
 @set have-ldexpf yes
 @set have-llrint yes
 @set have-llrintf yes
-@c @set have-log2 no
-@c @set have-log2f no
+@set have-log2 yes
+@set have-log2f yes
 @set have-log10f yes
 @set have-lrint yes
 @set have-lrintf yes
@@ -326,7 +326,7 @@
 @set have-attribute-may-alias yes
 @set have-attribute-packed yes
 @set have-ebp-available yes
-@c @set have-ebx-available no
+@set have-ebx-available yes
 @c @set have-gnu-as no
 @c @set have-gnu-windres no
 @c @set have-ibm-asm no
@@ -354,7 +354,7 @@
 @c @set have-struct-sockaddr-sa-len no
 @set have-struct-sockaddr-storage yes
 @c @set have-struct-stat-st-mtim-tv-nsec no
-@c @set have-struct-v4l2-frmivalenum-discrete no
+@set have-struct-v4l2-frmivalenum-discrete yes
 @set have-atomics-native yes
 @c @set have-dos-paths no
 @c @set have-dxva2-lib no
@@ -387,7 +387,7 @@
 @set config-demuxers yes
 @set config-muxers yes
 @set config-protocols yes
-@c @set config-doc no
+@set config-doc yes
 @set config-htmlpages yes
 @set config-manpages yes
 @set config-podpages yes
@@ -522,7 +522,7 @@
 @set config-small yes
 @c @set config-static no
 @set config-swscale-alpha yes
-@set config-gpl yes
+@c @set config-gpl no
 @c @set config-nonfree no
 @c @set config-version3 no
 @set config-avcodec yes
@@ -531,7 +531,7 @@
 @set config-avformat yes
 @c @set config-avresample no
 @set config-avutil yes
-@set config-postproc yes
+@c @set config-postproc no
 @set config-swresample yes
 @set config-swscale yes
 @c @set config-ffplay no
@@ -1701,9 +1701,9 @@
 @set config-bench-filter yes
 @set config-bitplanenoise-filter yes
 @set config-blackdetect-filter yes
-@set config-blackframe-filter yes
+@c @set config-blackframe-filter no
 @set config-blend-filter yes
-@set config-boxblur-filter yes
+@c @set config-boxblur-filter no
 @set config-bwdif-filter yes
 @set config-chromakey-filter yes
 @set config-ciescope-filter yes
@@ -1712,14 +1712,14 @@
 @set config-colorchannelmixer-filter yes
 @set config-colorkey-filter yes
 @set config-colorlevels-filter yes
-@set config-colormatrix-filter yes
+@c @set config-colormatrix-filter no
 @set config-colorspace-filter yes
 @set config-convolution-filter yes
 @set config-copy-filter yes
 @c @set config-coreimage-filter no
-@set config-cover-rect-filter yes
+@c @set config-cover-rect-filter no
 @set config-crop-filter yes
-@set config-cropdetect-filter yes
+@c @set config-cropdetect-filter no
 @set config-curves-filter yes
 @set config-datascope-filter yes
 @set config-dctdnoiz-filter yes
@@ -1729,7 +1729,7 @@
 @c @set config-deinterlace-qsv-filter no
 @c @set config-deinterlace-vaapi-filter no
 @set config-dejudder-filter yes
-@set config-delogo-filter yes
+@c @set config-delogo-filter no
 @set config-deshake-filter yes
 @set config-detelecine-filter yes
 @set config-dilation-filter yes
@@ -1740,7 +1740,7 @@
 @c @set config-drawtext-filter no
 @set config-edgedetect-filter yes
 @set config-elbg-filter yes
-@set config-eq-filter yes
+@c @set config-eq-filter no
 @set config-erosion-filter yes
 @set config-extractplanes-filter yes
 @set config-fade-filter yes
@@ -1749,22 +1749,22 @@
 @set config-fieldhint-filter yes
 @set config-fieldmatch-filter yes
 @set config-fieldorder-filter yes
-@set config-find-rect-filter yes
+@c @set config-find-rect-filter no
 @set config-format-filter yes
 @set config-fps-filter yes
 @set config-framepack-filter yes
 @set config-framerate-filter yes
 @set config-framestep-filter yes
 @c @set config-frei0r-filter no
-@set config-fspp-filter yes
+@c @set config-fspp-filter no
 @set config-gblur-filter yes
-@set config-geq-filter yes
+@c @set config-geq-filter no
 @set config-gradfun-filter yes
 @set config-haldclut-filter yes
 @set config-hflip-filter yes
-@set config-histeq-filter yes
+@c @set config-histeq-filter no
 @set config-histogram-filter yes
-@set config-hqdn3d-filter yes
+@c @set config-hqdn3d-filter no
 @set config-hqx-filter yes
 @set config-hstack-filter yes
 @set config-hue-filter yes
@@ -1776,9 +1776,9 @@
 @set config-idet-filter yes
 @set config-il-filter yes
 @set config-inflate-filter yes
-@set config-interlace-filter yes
+@c @set config-interlace-filter no
 @set config-interleave-filter yes
-@set config-kerndeint-filter yes
+@c @set config-kerndeint-filter no
 @set config-lenscorrection-filter yes
 @set config-loop-filter yes
 @set config-lut-filter yes
@@ -1788,36 +1788,36 @@
 @set config-lutyuv-filter yes
 @set config-maskedclamp-filter yes
 @set config-maskedmerge-filter yes
-@set config-mcdeint-filter yes
+@c @set config-mcdeint-filter no
 @set config-mergeplanes-filter yes
 @set config-mestimate-filter yes
 @set config-metadata-filter yes
 @set config-midequalizer-filter yes
 @set config-minterpolate-filter yes
-@set config-mpdecimate-filter yes
+@c @set config-mpdecimate-filter no
 @set config-negate-filter yes
 @set config-nlmeans-filter yes
-@set config-nnedi-filter yes
+@c @set config-nnedi-filter no
 @set config-noformat-filter yes
 @set config-noise-filter yes
 @set config-null-filter yes
 @c @set config-ocr-filter no
 @c @set config-ocv-filter no
 @set config-overlay-filter yes
-@set config-owdenoise-filter yes
+@c @set config-owdenoise-filter no
 @set config-pad-filter yes
 @set config-palettegen-filter yes
 @set config-paletteuse-filter yes
 @set config-perms-filter yes
-@set config-perspective-filter yes
-@set config-phase-filter yes
+@c @set config-perspective-filter no
+@c @set config-phase-filter no
 @set config-pixdesctest-filter yes
-@set config-pp-filter yes
-@set config-pp7-filter yes
+@c @set config-pp-filter no
+@c @set config-pp7-filter no
 @set config-premultiply-filter yes
 @set config-prewitt-filter yes
 @set config-psnr-filter yes
-@set config-pullup-filter yes
+@c @set config-pullup-filter no
 @set config-qp-filter yes
 @set config-random-filter yes
 @set config-readeia608-filter yes
@@ -1826,10 +1826,10 @@
 @set config-remap-filter yes
 @set config-removegrain-filter yes
 @set config-removelogo-filter yes
-@set config-repeatfields-filter yes
+@c @set config-repeatfields-filter no
 @set config-reverse-filter yes
 @set config-rotate-filter yes
-@set config-sab-filter yes
+@c @set config-sab-filter no
 @set config-scale-filter yes
 @c @set config-scale-npp-filter no
 @c @set config-scale-qsv-filter no
@@ -1850,16 +1850,16 @@
 @set config-shuffleplanes-filter yes
 @set config-sidedata-filter yes
 @set config-signalstats-filter yes
-@set config-signature-filter yes
-@set config-smartblur-filter yes
+@c @set config-signature-filter no
+@c @set config-smartblur-filter no
 @set config-sobel-filter yes
 @set config-split-filter yes
-@set config-spp-filter yes
+@c @set config-spp-filter no
 @set config-ssim-filter yes
-@set config-stereo3d-filter yes
+@c @set config-stereo3d-filter no
 @set config-streamselect-filter yes
 @c @set config-subtitles-filter no
-@set config-super2xsai-filter yes
+@c @set config-super2xsai-filter no
 @set config-swaprect-filter yes
 @set config-swapuv-filter yes
 @set config-tblend-filter yes
@@ -1867,12 +1867,12 @@
 @set config-threshold-filter yes
 @set config-thumbnail-filter yes
 @set config-tile-filter yes
-@set config-tinterlace-filter yes
+@c @set config-tinterlace-filter no
 @set config-transpose-filter yes
 @set config-trim-filter yes
 @set config-unsharp-filter yes
-@set config-uspp-filter yes
-@set config-vaguedenoiser-filter yes
+@c @set config-uspp-filter no
+@c @set config-vaguedenoiser-filter no
 @set config-vectorscope-filter yes
 @set config-vflip-filter yes
 @c @set config-vidstabdetect-filter no
@@ -1896,7 +1896,7 @@
 @set config-haldclutsrc-filter yes
 @set config-life-filter yes
 @set config-mandelbrot-filter yes
-@set config-mptestsrc-filter yes
+@c @set config-mptestsrc-filter no
 @set config-nullsrc-filter yes
 @set config-rgbtestsrc-filter yes
 @set config-smptebars-filter yes

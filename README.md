@@ -1,4 +1,6 @@
 # ffmpeg-build
+ndk:android-ndk-r14b-darwin-x86_64
+
 ffmpeg-build
 
 1、修改FFmpeg 中configure文件
@@ -22,6 +24,8 @@ ffmpeg-build
    SLIB_INSTALL_NAME='$(SLIBNAME_WITH_MAJOR)'
 
    SLIB_INSTALL_LINKS='$(SLIBNAME)'
+   
+   并运行
 
 
 2、下载并安装ndk ,配置ndk

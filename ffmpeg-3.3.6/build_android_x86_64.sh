@@ -13,7 +13,37 @@ GENERAL="\
 --nm=$PREBUILT/bin/x86_64-linux-android-nm"
 
 MODULES="\
---enable-gpl"
+--disable-debug \
+--disable-encoders \
+--disable-decoders \
+--enable-decoder=hevc \
+--enable-hwaccels \
+--disable-muxers \
+--disable-demuxers \
+--enable-muxer=hevc \
+--enable-demuxer=hevc \
+--disable-parsers \
+--enable-parser=hevc \
+--disable-network \
+--disable-protocols \
+--disable-devices \
+--disable-indevs \
+--disable-outdevs \
+--disable-yasm \
+--enable-asm \
+--enable-neon \
+--disable-programs \
+--disable-ffmpeg \
+--disable-ffplay \
+--disable-ffprobe \
+--disable-ffserver \
+--disable-doc \
+--disable-htmlpages \
+--disable-manpages \
+--disable-podpages \
+--disable-txtpages \
+--enable-cross-compile"
+
 
 
 function build_x86_64
@@ -29,8 +59,11 @@ function build_x86_64
  --enable-shared \
  --disable-static \
  --extra-ldflags="-Wl,-rpath-link=$PLATFORM/usr/lib64 -L$PLATFORM/usr/lib64 -nostdlib -lc -lm -ldl -llog" \
-  --enable-zlib \
-  --disable-doc \
+
+#  --enable-zlib \
+
+# --disable-doc \
+
   ${MODULES}
 
   make clean
